@@ -6,18 +6,10 @@ export const headerData = {
       text: 'Newsletter',
       links: [
         {
-          text: 'Cybersecurity',
-          href: getPermalink('/homes/saas'),
+          text: 'January 2025',
+          href: getPermalink('/homes/personal'),
         },
-        
-        {
-          text: 'Cloud Architecture',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Network Engineering',
-          href: getPermalink('/homes/mobile-app'),
-        },
+
         //-{
         //  text: 'About the Founder',
         //  href: getPermalink('/homes/personal'),
@@ -86,7 +78,7 @@ export const headerData = {
       links: [
         {
           text: 'Azure Environmental Sensing',
-          href: getPermalink('/public/Azure_environmental_sensing.pdf'),
+          href: getPermalink('/public/Azure_weather_sensing1.pdf'),
         },
         {
           text: 'Azure STAC',
