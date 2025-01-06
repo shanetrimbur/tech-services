@@ -1,9 +1,10 @@
 ---
 publishDate: 2025-01-05T00:00:00Z
 author: Shane Trimbur
-title: "Technical Case Study: Modernizing IAM Infrastructure for a Global Financial Services Provider"
-image: https://images.unsplash.com/photo-1516996087931-5ae405802f9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
+title: "Technical Case Study: Modernizing IAM Infrastructure for a Global Defense and Coordination Network"
+image: ~/assets/images/IDM.webp
 category: Case Studies
+excerpt: How modern IAM architecture can transform security operations while delivering significant business value.
 tags:
   - security
   - IAM
@@ -11,16 +12,16 @@ tags:
   - identity management
   - cloud infrastructure
 metadata:
-  canonical: https://securescale.com/case-studies/modernizing-iam-infrastructure
+  canonical: https://defensetechsolutions.com/case-studies/modernizing-iam-infrastructure
 ---
 
-When a leading financial services provider managing over $500B in assets approached SecureScale with their Identity and Access Management (IAM) challenges, they were facing critical issues that threatened both security and operational efficiency. This case study details our technical approach to modernizing their IAM infrastructure while maintaining 24/7 operations.
+When a global organization responsible for coordinating complex operations across joint commands and partner nations sought assistance with their Identity and Access Management (IAM) challenges, they faced critical issues that jeopardized both security and mission readiness. This case study explores our technical approach to modernizing their IAM infrastructure, ensuring seamless collaboration, enhanced security, and uninterrupted operational capability.
 
-## The Challenge: Complex Legacy Infrastructure
+## The Challenge: Complex Identity Management Infrastructure
 
-The client's environment represented a common yet challenging scenario in enterprise IAM:
+The client's environment represented a unique challenge in enterprise IAM:
 
-- Multiple Active Directory forests (6) with complex trust relationships
+- Multiple Active Directory forests (100+) with complex trust relationships
 - Legacy Oracle Identity Manager deployment (version 11.1.2.3)
 - Custom SOAP-based provisioning workflows
 - Homegrown role management system with 50,000+ roles
@@ -32,6 +33,7 @@ These systems resulted in:
 - Role evaluation taking 30+ seconds during authentication
 - Manual provisioning causing 48+ hour delays
 - Inability to provide comprehensive access audit trails
+- VDI issues due to reachback over poor bandwidth
 
 ## Technical Solution Architecture
 

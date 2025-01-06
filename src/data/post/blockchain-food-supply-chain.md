@@ -3,9 +3,9 @@
 publishDate: 2025-01-05T00:00:00Z
 author: Shane Trimbur
 title: "Revolutionizing Food Supply: How Blockchain Can Reduce Our Dependency on Processed Foods"
-date: "2025-01-05"
 tags: ["blockchain", "food-supply-chain", "technology", "agriculture"]
 image: ~/assets/images/blockchainfood.webp
+excerpt: Predictive analytics based on blockchain data could help retailers better match supply with demand, reducing waste and the need for long-term storage.
 metadata:
   canonical: https://defensetechsolutions.com/blockchain-food-supply-chain
 ---

@@ -3,33 +3,54 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Newsletter',
       links: [
         {
-          text: 'SaaS',
+          text: 'Cybersecurity',
           href: getPermalink('/homes/saas'),
         },
+        
         {
-          text: 'Startup',
+          text: 'Cloud Architecture',
           href: getPermalink('/homes/startup'),
         },
         {
-          text: 'Mobile App',
+          text: 'Network Engineering',
           href: getPermalink('/homes/mobile-app'),
         },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
+        //-{
+        //  text: 'About the Founder',
+        //  href: getPermalink('/homes/personal'),
+        //},
       ],
     },
     {
-      text: 'Pages',
+      text: 'Projects',
       links: [
         {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          text: 'Cybersecurity',
+          href: getPermalink('/homes/saas'),
         },
+        
+        {
+          text: 'Cloud Architecture',
+          href: getPermalink('/homes/startup'),
+        },
+        {
+          text: 'Network Engineering',
+          href: getPermalink('/homes/mobile-app'),
+        },
+        //-{
+        //  text: 'About the Founder',
+        //  href: getPermalink('/homes/personal'),
+        //},
+      ],
+    },
+
+    {
+      text: 'Menu',
+      links: [
+
         {
           text: 'Services',
           href: getPermalink('/services'),
@@ -54,18 +75,22 @@ export const headerData = {
           text: 'Privacy policy',
           href: getPermalink('/privacy'),
         },
+        {
+          text: 'Testimonials',
+          href: getPermalink('/testimonials'),
+        },
       ],
     },
     {
-      text: 'Landing',
+      text: 'Whitepapers',
       links: [
         {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
+          text: 'Azure Environmental Sensing',
+          href: getPermalink('/public/Azure_environmental_sensing.pdf'),
         },
         {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
+          text: 'Azure STAC',
+          href: getPermalink('/public/azure_STAC.pdf'),
         },
         {
           text: 'Click-Through',
@@ -86,36 +111,44 @@ export const headerData = {
       ],
     },
     {
-      text: 'Blog',
+      text: 'Playbooks',
       links: [
         {
           text: 'Blog List',
           href: getBlogPermalink(),
         },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
+
         {
           text: 'Category Page',
           href: getPermalink('tutorials', 'category'),
         },
         {
           text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
+          href: getPermalink('astro', 'tag', 'blockchain'),
         },
       ],
     },
     {
-      text: 'Widgets',
-      href: '#',
+      text: 'Blog',
+      links: [
+        {
+          text: 'Blog List',
+          href: getBlogPermalink(),
+        },
+
+        {
+          text: 'Category Page',
+          href: getPermalink('tutorials', 'category'),
+        },
+        {
+          text: 'Tag Page',
+          href: getPermalink('astro', 'tag', 'blockchain'),
+        },
+      ],
     },
+
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Download', href: 'https://github.com/shanetrimbur', target: '_blank' }],
 };
 
 export const footerData = {
@@ -133,24 +166,24 @@ export const footerData = {
       ],
     },
     {
-      title: 'Platform',
-      links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
+      //title: 'Platform',
+      //links: [
+      //  { text: 'Developer API', href: '#' },
+      //  { text: 'Partners', href: '#' },
+      //  { text: 'Atom', href: '#' },
+      //  { text: 'Electron', href: '#' },
+      //  { text: 'AstroWind Desktop', href: '#' },
+      //],
     },
     {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
-      ],
+     // title: 'Support',
+      //links: [
+      //  { text: 'Docs', href: '#' },
+      //  { text: 'Community Forum', href: '#' },
+      //  { text: 'Professional Services', href: '#' },
+      //  { text: 'Skills', href: '#' },
+      //  { text: 'Status', href: '#' },
+      //],
     },
     {
       title: 'Company',
@@ -174,10 +207,10 @@ export const footerData = {
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/shanetrimbur' },
   ],
   footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="~/assets/favicons/favicon.ico" alt=" " loading="lazy"></img>
+    Made by <a class="text-blue-600 underline dark:text-muted" href="https://defensetechsolutions.com/"> Defense Technical Solutions</a> · All rights reserved.
   `,
 };
