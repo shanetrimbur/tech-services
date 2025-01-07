@@ -26,11 +26,11 @@ export const headerData = {
         
         {
           text: 'Cloud Architecture',
-          href: getPermalink('/homes/startup'),
+          href: getPermalink('/homes/saas'),
         },
         {
           text: 'Network Engineering',
-          href: getPermalink('/homes/mobile-app'),
+          href: getPermalink('/homes/saas'),
         },
         //-{
         //  text: 'About the Founder',
@@ -53,7 +53,7 @@ export const headerData = {
         },
         {
           text: 'About us',
-          href: getPermalink('/about'),
+          href: getPermalink('/'),
         },
         {
           text: 'Contact',
@@ -61,7 +61,7 @@ export const headerData = {
         },
         {
           text: 'Terms',
-          href: getPermalink('/terms'),
+          href: getPermalink('/'),
         },
         {
           text: 'Privacy policy',
