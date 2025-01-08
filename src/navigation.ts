@@ -2,20 +2,20 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    {
-      text: 'Newsletter',
-      links: [
-        {
-          text: 'January 2025',
-          href: getPermalink('/homes/personal'),
-        },
-
-        //-{
-        //  text: 'About the Founder',
-        //  href: getPermalink('/homes/personal'),
-        //},
-      ],
-    },
+    //{
+    //  text: 'Newsletter',
+    //  links: [
+    //    {
+    //      text: 'January 2025',
+    //      href: getPermalink('/homes/personal'),
+    //    },
+    //
+    //    //-{
+    //    //  text: 'About the Founder',
+    //    //  href: getPermalink('/homes/personal'),
+    //    //},
+    //  ],
+    //},
     {
       text: 'Projects',
       links: [
@@ -24,14 +24,14 @@ export const headerData = {
           href: getPermalink('/homes/saas'),
         },
         
-        {
-          text: 'Cloud Architecture',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Network Engineering',
-          href: getPermalink('/homes/saas'),
-        },
+        //{
+        //  text: 'Cloud Architecture',
+        //  href: getPermalink('/homes/saas'),
+        //},
+        //{
+        //  text: 'Network Engineering', 
+        //  href: getPermalink('/homes/saas'),
+        //},
         //-{
         //  text: 'About the Founder',
         //  href: getPermalink('/homes/personal'),
@@ -47,30 +47,30 @@ export const headerData = {
           text: 'Services',
           href: getPermalink('/services'),
         },
-        {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-        {
-          text: 'Testimonials',
-          href: getPermalink('/testimonials'),
-        },
+        //{
+        //  text: 'Pricing',
+        //  href: getPermalink('/pricing'),
+        //},
+        //{
+        //  text: 'About us',
+        //  href: getPermalink('/'),
+        //},
+        //{
+        //  text: 'Contact',
+        //  href: getPermalink('/contact'),
+        //},
+        //{
+        //  text: 'Terms',
+        //  href: getPermalink('/'),
+        //},
+        //{
+        //  text: 'Privacy policy',
+        //  href: getPermalink('/privacy'),
+        //},
+        //{
+        //  text: 'Testimonials',
+        //  href: getPermalink('/testimonials'),
+        //},
       ],
     },
     {
@@ -80,46 +80,46 @@ export const headerData = {
           text: 'Azure Environmental Sensing',
           href: getPermalink('/public/Azure_weather_sensing1.pdf'),
         },
-        {
-          text: 'Azure STAC',
-          href: getPermalink('/public/azure_STAC.pdf'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
+        //{
+        //  text: 'Azure STAC',
+        //  href: getPermalink('/public/azure_STAC.pdf'),
+        //},
+        //{
+        //  text: 'Click-Through',
+        //  href: getPermalink('/landing/click-through'),
+        //},
+        //{
+        //  text: 'Product Details (or Services)',
+        //  href: getPermalink('/landing/product'),
+        //},
+        //{
+        //  text: 'Coming Soon or Pre-Launch',
+        //  href: getPermalink('/landing/pre-launch'),
+        //},
+        //{
+        //  text: 'Subscription',
+        //  href: getPermalink('/landing/subscription'),
+        //},
       ],
     },
-    {
-      text: 'Playbooks',
-      links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag', 'blockchain'),
-        },
-      ],
-    },
+    //{
+    //  text: 'Playbooks',
+    //  links: [
+    //    {
+    //      text: 'Blog List',
+    //      href: getBlogPermalink(),
+    //    },
+    //
+    //    //{
+    //    //  text: 'Category Page',
+    //    //  href: getPermalink('tutorials', 'category'),
+    //    //},
+    //    //{
+    //    //  text: 'Tag Page',
+    //    //  href: getPermalink('astro', 'tag', 'blockchain'),
+    //    //},
+    //  ],
+    //},
     {
       text: 'Blog',
       links: [
@@ -128,14 +128,14 @@ export const headerData = {
           href: getBlogPermalink(),
         },
 
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag', 'blockchain'),
-        },
+        //{
+        //  text: 'Category Page',
+        //  href: getPermalink('tutorials', 'category'),
+        //},
+        //{
+        //  text: 'Tag Page',
+        //  href: getPermalink('astro', 'tag', 'blockchain'),
+        //},
       ],
     },
 

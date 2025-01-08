@@ -2,7 +2,7 @@
 publishDate: 2025-01-05T00:00:00Z
 author: Shane Trimbur
 title: "Technical Case Study: Modernizing IAM Infrastructure for a Global Defense and Coordination Network"
-image: ~/assets/images/IDM.webp
+image: ~/assets/images/security.webp
 category: Case Studies
 excerpt: How modern IAM architecture can transform security operations while delivering significant business value.
 tags:
