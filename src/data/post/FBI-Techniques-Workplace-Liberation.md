@@ -1,10 +1,20 @@
-## publishDate: 2025-01-05T00:00:00Z
+---
+publishDate: 2025-01-05T00:00:00Z
 author: Shane Trimbur
-title: "Power Plays and Peace Talks: FBI Techniques for Workplace Liberation", "workplace", "negotiation"]
+title: "Power Plays and Peace Talks: FBI Crisis Negotiation Techniques for Workplace Liberation"
 image: ~/assets/images/IMG_6403.png
+category: Advice
 excerpt: Learn how FBI hostage negotiation techniques can transform difficult workplace relationships into collaborative partnerships.
+tags:
+  - psychology
+  - micromanagement
+  - business
+  - politics
+  - conflict
 metadata:
-canonical: https://trimburtech.com
+  canonical: https://trimburtech.com/case-studies/FBI-Techniques-Workplace-Liberation
+---
+
 
 It hit me during another frustrating week of watching my boss bypass me to work directly with my customers: I wasn't dealing with a management problem – I was dealing with a negotiation scenario. And not just any negotiation, but one with striking parallels to hostage situations: high stakes, information asymmetry, and complex power dynamics.
 

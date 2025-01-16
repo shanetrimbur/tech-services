@@ -12,7 +12,7 @@ tags:
   - identity management
   - cloud infrastructure
 metadata:
-  canonical: https://defensetechsolutions.com/case-studies/modernizing-iam-infrastructure
+  canonical: https://trimburtech.com/case-studies/modernizing-iam-infrastructure
 ---
 
 When a global organization responsible for coordinating complex operations across joint commands and partner nations sought assistance with their Identity and Access Management (IAM) challenges, they faced critical issues that jeopardized both security and mission readiness. This case study explores our technical approach to modernizing their IAM infrastructure, ensuring seamless collaboration, enhanced security, and uninterrupted operational capability.
