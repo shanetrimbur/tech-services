@@ -41,16 +41,17 @@ const metadata = {
 
   <!-- Hero2 Widget ******************* -->
 
-  <Hero
+<Hero
     id="hero"
-    title="Sarah Johnson"
-    tagline="Personal Web Demo"
+    title="Shane Trimbur"
+    tagline="Cybersecurity Architect"
     actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree from
-      New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into captivating
-      realities.
+      Veteran cybersecurity strategist and relationship builder with extensive defense sector expertise. <br /> With 20 years of 
+      active duty experience and a degree in Computer and Information Technology from University of Maryland. I accelerate the 
+      translation of military requirements into enterprise solutions, consistently building high-performing teams while serving 
+      as a trusted advisor bridging DoD and industry capabilities.
     </Fragment>
   </Hero>
 
@@ -85,23 +86,27 @@ const metadata = {
         },
       },
     ]}
+    /*
     image={{
       src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
       alt: 'Colorful Image',
       loading: 'eager',
     }}
+    */
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
-      <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+<p>
+        Welcome to my professional portfolio. My work demonstrates my dedication to cybersecurity excellence, where each
+        project represents a step forward in securing and advancing technological capabilities.
       </p>
       <br />
       <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
+        I find purpose in protecting critical infrastructure and fostering innovation, whether through implementing 
+        cutting-edge cloud architectures, leading JADC2 transformation initiatives, or developing comprehensive 
+        security frameworks that bridge military and commercial requirements.
       </p>
+      
       <br />
       <p>If you're curious to dive deeper into my work, you can follow me:</p>
     </Fragment>
@@ -113,21 +118,108 @@ const metadata = {
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
+<Steps
     id="resume"
     title="Work experience"
     items={[
       {
         title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+          'Data Systems Engineering Officer <br /> <span class="font-normal">3rd Marine Aircraft Wing, MCAS Miramar</span> <br /> <span class="text-sm font-normal">2023 - Present</span>',
+        description: `Spearheaded enterprise cloud adoption initiative impacting MARFORPAC and 3rd MAW, implementing cutting-edge multi-cloud architecture. <br /> Pioneered innovative Azure-based data fusion system integrating Naval Research Labs with partner agencies. <br /> Established advanced JADC2 capabilities by implementing environmental intelligence integration. <br /> Enhanced battlefield visualization through comprehensive systems integration.`,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+          'Data Systems Engineering Officer <br /> <span class="font-normal">Marine Wing Communications Squadron 38, MCAS Miramar</span> <br /> <span class="text-sm font-normal">2022 - 2023</span>',
+        description: `Led systems engineering activities toward award-winning JADC2 transformation initiative earning both 2022 Shea Award and DON IT Excellence Award. <br /> Modernized tactical infrastructure supporting 20,000+ joint force personnel, implementing resilient architecture. <br /> Supervised integration of advanced network systems during Project Convergence. <br /> Significantly reduced sensor-to-shooter timelines through innovative system design.`,
         icon: 'tabler:briefcase',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+<!-- Steps Widget: Projects -->
+<Steps
+    id="projects"
+    title="Notable Projects"
+    items={[
+      {
+        title:
+          'JADC2 Environmental Data Integration <br /> <span class="font-normal">Azure, Python, Synapse Analytics</span> <br /> <span class="text-sm font-normal">2023</span>',
+        description: `Developed cloud-native data fusion platform for real-time environmental intelligence sharing. <br /> Implemented Azure-based ETL pipelines for processing meteorological and oceanographic data. <br /> Created APIs for seamless integration with Naval Research Lab systems.`,
+        icon: 'tabler:code',
+      },
+      {
+        title:
+          'Campus-Wide Network Modernization <br /> <span class="font-normal">Enterprise Architecture, FAR, Program Management</span> <br /> <span class="text-sm font-normal">2022</span>',
+        description: `Led $15M enterprise WiFi deployment across 50+ buildings, navigating complex FAR requirements. <br /> Developed comprehensive acquisition strategy and technical requirements. <br /> Transformed learning environment for 10,000+ students through end-to-end program management.`,
+        icon: 'tabler:network',
+      },
+      {
+        title:
+          'Security Operations Platform <br /> <span class="font-normal">Kafka, Postgres, ELK Stack, API Integration</span> <br /> <span class="text-sm font-normal">2021</span>',
+        description: `Engineered distributed ML pipeline processing AI model metadata. <br /> Architected schema-driven ingest service handling high-volume model metadata streams. <br /> Implemented automated correlation engine leveraging Elasticsearch for security event analysis.`,
+        icon: 'tabler:shield',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+<!-- Steps Widget: Additional Work Experience -->
+<Steps
+    id="more-experience"
+    title="Additional Experience"
+    items={[
+      {
+        title:
+          'Communications Directorate Lead <br /> <span class="font-normal">Marine Corps Communications-Electronics School, Twentynine Palms</span> <br /> <span class="text-sm font-normal">2019 - 2022</span>',
+        description: `Directed $9M+ annual IT portfolio program, achieving 100% NIST/CNSS compliance. <br /> Led and mentored diverse team of 10 Marines, 3 senior GS employees, and 3 contractors. <br /> Transformed educational delivery through comprehensive campus architecture redesign.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Information Systems Security Manager <br /> <span class="font-normal">Special Purpose MAGTF Crisis Response-Central Command</span> <br /> <span class="text-sm font-normal">2017 - 2019</span>',
+        description: `Directed complex multi-site cybersecurity operations across hostile territories. <br /> Engineered and implemented advanced threat detection systems. <br /> Achieved 100% mission success rate in protecting critical operational data.`,
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+<!-- Steps Widget: Education & Certifications -->
+<Steps
+    id="education"
+    title="Education & Certifications"
+    items={[
+      {
+        title:
+          'Bachelor of Science <br /> <span class="font-normal">University of Maryland University College</span> <br /> <span class="text-sm font-normal">2012</span>',
+        description: `Computer and Information Technology <br /> College Park, MD`,
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Professional Certifications <br /> <span class="font-normal">Industry Standards</span>',
+        description: `CISSP Certification <br /> TS/SCI Clearance <br /> Extensive expertise in NIST 800-53/171, RMF, CMMC 2.0, Zero Trust, MITRE ATT&CK`,
+        icon: 'tabler:certificate',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+<!-- Steps Widget: Technical Skills -->
+<Steps
+    id="skills"
+    title="Technical Skills"
+    items={[
+      {
+        title: 'Security Technologies & Frameworks',
+        description: `Tenable ACAS, RedHat, Cisco, Fortigate, Palo Alto, Windows Systinternals, Security Onion <br /> NIST 800-53/171, RMF, CMMC 2.0, Zero Trust, MITRE ATT&CK, DISA STIGs, ISO 27001`,
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Cloud & Development',
+        description: `Azure, AWS, Openshift, SDWAN, VMWare/Broadcom <br /> Python, Powershell, Javascript, Java, SQL, C++, Rust <br /> TensorFlow, PyTorch, Hugging Face, Docker, Kubernetes`,
+        icon: 'tabler:cloud-computing',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
@@ -140,12 +232,12 @@ const metadata = {
     title="Education"
     items={[
       {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        title: `Bachelor of Science in Computer and Information Technology <br /> <span class="font-normal">University of Maryland University College</span> <br /> <span class="text-sm font-normal">2012</span>`,
         icon: 'tabler:school',
       },
       {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
-        icon: 'tabler:school',
+        title: `CISSP (Certified Information Systems Security Professional) <br /> <span class="font-normal">(ISC)² Certification</span>`,
+        icon: 'tabler:certificate',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
@@ -155,45 +247,45 @@ const metadata = {
 
   <Features3
     title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
+    subtitle="Essential technical competencies that drive innovation in cybersecurity and enterprise solutions."
     columns={3}
     defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
+        title: 'Security Technologies',
+        description: 'Expert in Tenable ACAS, RedHat, Cisco, Fortigate, Palo Alto, Windows Systinternals, and Security Onion.',
       },
       {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
+        title: 'Security Frameworks',
+        description: 'Deep knowledge of NIST 800-53/171, RMF, CMMC 2.0, Zero Trust, MITRE ATT&CK, DISA STIGs, and ISO 27001.',
       },
       {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+        title: 'Cloud & Automation',
+        description: 'Proficient in Azure, AWS, Openshift, SDWAN, and VMWare/Broadcom environments.',
       },
       {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
+        title: 'Programming & Scripting',
+        description: 'Skilled in Python, Powershell, Javascript, Java, SQL, C++, and Rust development.',
       },
       {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
+        title: 'AI/ML Technologies',
+        description: 'Experience with TensorFlow, PyTorch, Hugging Face, and Neural Network Optimization.',
       },
       {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
+        title: 'DevSecOps',
+        description: 'Proficient in Docker, Kubernetes, CI/CD, Git, Jenkins, and API Development.',
       },
       {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
+        title: 'Project Management',
+        description: 'Experienced with GitHub Projects, Jira, Agile methodologies, and enterprise program management.',
       },
       {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
+        title: 'System Architecture',
+        description: 'Expert in designing and implementing enterprise-level security architectures and cloud solutions.',
       },
       {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
+        title: 'Leadership',
+        description: 'Proven track record of leading diverse teams and managing complex technical initiatives in military and civilian contexts.',
       },
     ]}
   />
@@ -202,35 +294,35 @@ const metadata = {
 
   <Content
     id="porfolio"
-    title="Elevating visual narratives"
-    subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
+    title="Enterprise Security Innovation"
+    subtitle="Explore key projects where cybersecurity expertise and technical innovation converge to create robust, scalable solutions for complex military and civilian challenges."
     isReversed
     items={[
       {
         title: 'Description:',
         description:
-          'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
+          'Led the development and implementation of an enterprise cloud adoption initiative for MARFORPAC and 3rd MAW through the Joint Warfighting Cloud Capability program. The project focused on implementing cutting-edge multi-cloud architecture to enhance DoD global operations and mission capabilities.',
       },
       {
         title: 'Role:',
         description:
-          'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
+          'Served as lead architect and project manager, overseeing the entire implementation from concept to deployment. Designed resilient cloud architecture, coordinated with multiple stakeholders, and successfully integrated complex systems while ensuring compliance with DoD security requirements.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
-      alt: 'Tech Design Image',
+      src: '/api/placeholder/800/400',
+      alt: 'Enterprise Architecture Diagram',
     }}
     callToAction={{
       target: '_blank',
-      text: 'Go to the project',
+      text: 'View Project Details',
       icon: 'tabler:chevron-right',
       href: '#',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 1: <br /><span class="text-2xl">Brand identity for tech innovators</span>
+        Project Highlight: <br /><span class="text-2xl">Enterprise Cloud Adoption Initiative</span>
       </h3>
     </Fragment>
 
@@ -248,27 +340,27 @@ const metadata = {
       {
         title: 'Description:',
         description:
-          'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
+          'Led award-winning JADC2 transformation initiative that modernized tactical infrastructure supporting 20,000+ joint force personnel. The project earned both the 2022 Shea Award and DON IT Excellence Award for its innovative approach to military communications.',
       },
       {
         title: 'Role:',
-        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
+        description: `Served as lead systems engineer, directing the implementation of resilient architecture and advanced network systems during Project Convergence. Successfully reduced sensor-to-shooter timelines through innovative system design and integration of cutting-edge technologies.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Art and Music Poster Image',
+      src: '/api/placeholder/800/400',
+      alt: 'JADC2 Systems Architecture',
     }}
     callToAction={{
       target: '_blank',
-      text: 'Go to the project',
+      text: 'View Project Details',
       icon: 'tabler:chevron-right',
       href: '#',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">Event poster for art & music festival</span>
+        Project Highlight: <br /><span class="text-2xl">JADC2 Transformation Initiative</span>
       </h3>
     </Fragment>
 
@@ -285,27 +377,27 @@ const metadata = {
     items={[
       {
         title: 'Description:',
-        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
+        description: `Led a comprehensive $15M enterprise WiFi deployment across 50+ buildings, transforming the learning environment for 10,000+ students. The project required navigating complex Federal Acquisition Regulation (FAR) requirements including Davis-Bacon Act compliance and IDIQ vehicle selection.`,
       },
       {
         title: 'Role:',
-        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
+        description: `Served as lead architect and program manager, developing comprehensive acquisition strategy and technical requirements while managing environmental, safety and labor considerations. Successfully transformed the educational delivery system through end-to-end program management from requirements gathering to deployment.`,
       },
     ]}
     image={{
-      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Fashion e-commerce Image',
+      src: '/api/placeholder/800/400',
+      alt: 'Network Infrastructure Diagram',
     }}
     callToAction={{
       target: '_blank',
-      text: 'Go to the project',
+      text: 'View Project Details',
       icon: 'tabler:chevron-right',
       href: '#',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 3: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
+        Project Highlight: <br /><span class="text-2xl">Campus-Wide Network Modernization</span>
       </h3>
     </Fragment>
 
@@ -314,78 +406,79 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Testimonials Widget *********** -->
+  {/* Testimonials Widget *********** 
 
   <Testimonials
-    title="Client testimonials"
-    subtitle="Discover what clients have to say about their experiences working with me."
+    title="Professional Recommendations"
+    subtitle="Insights from colleagues and leadership on project impacts and technical expertise."
     testimonials={[
       {
-        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
-        name: 'Mark Thompson',
-        job: 'Creative director',
+        testimonial: `His leadership in implementing the JADC2 transformation initiative was exceptional. The project's success in earning both the Shea Award and DON IT Excellence Award speaks volumes about his technical expertise and program management capabilities.`,
+        name: '',
+        job: 'Wing Commander, 3rd MAW',
         image: {
-          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Mark Thompson Image',
+          src: '/api/placeholder/150/150',
+          alt: 'Military Leadership',
         },
       },
       {
-        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
-        name: 'Emily Martinez',
-        job: 'CEO',
+        testimonial: `Shane's implementation of the enterprise cloud adoption initiative revolutionized our operations. His ability to navigate complex technical requirements while maintaining security compliance set new standards for DoD cloud integration.`,
+        name: '',
+        job: 'Technical Director, Naval Research Labs',
         image: {
-          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
-          alt: 'Emily Martinez Image',
+          src: '/api/placeholder/150/150',
+          alt: 'Technical Director',
         },
       },
       {
-        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
-        name: 'Laura Simmons',
-        job: 'Founder of an NGO',
+        testimonial: `His expertise in cybersecurity and system architecture transformed our campus-wide network infrastructure. The $15M deployment was executed flawlessly, showcasing his exceptional project management and technical leadership skills.`,
+        name: '',
+        job: 'CIO, Marine Corps Communications-Electronics School',
         image: {
-          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Laura Simmons Image',
+          src: '/api/placeholder/150/150',
+          alt: 'CIO Portrait',
         },
       },
       {
-        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
-        name: 'Alex Foster',
-        job: 'Director of web services',
+        testimonial: `The security operations platform he engineered demonstrated innovative approaches to ML pipeline processing and security event analysis. His technical vision and execution capabilities significantly enhanced our threat detection capabilities.`,
+        name: '',
+        job: 'Cybersecurity Operations Director',
         image: {
-          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Alex Foster Image',
+          src: '/api/placeholder/150/150',
+          alt: 'Operations Director',
         },
       },
       {
-        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
-        name: 'Jessica Collins',
-        job: 'Product Manager',
+        testimonial: `During crisis response operations, his leadership in maintaining zero security compromises across hostile territories was remarkable. His implementation of advanced threat detection systems proved crucial to mission success.`,
+        name: '',
+        job: 'MAGTF Commander',
         image: {
-          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
-          alt: 'Jessica Collins Image',
+          src: '/api/placeholder/150/150',
+          alt: 'Commander Portrait',
         },
       },
       {
-        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
-        name: 'Michael Carter',
-        job: 'Event Coordinator',
+        testimonial: `The collaboration with Shane on evaluating advanced network behavior analytics yielded exceptional results. His technical insight and innovative approach to security architecture significantly improved our threat detection capabilities.`,
+        name: '',
+        job: 'Senior Researcher, Johns Hopkins APL',
         image: {
-          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Michael Carter Image',
+          src: '/api/placeholder/150/150',
+          alt: 'Research Lead',
         },
       },
     ]}
   />
 
+*/}
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Let's create together"
-    subtitle="Ready to transform your vision into captivating designs?"
+    title="Let's innovate together"
+    subtitle="Ready to enhance your organization's security and technical capabilities?"
     actions={[
       {
         variant: 'primary',
-        text: 'Hire me',
+        text: 'Contact me',
         href: '/',
       },
     ]}
@@ -395,8 +488,8 @@ const metadata = {
 
   <BlogLatestPosts
     id="blog"
-    title="Explore my insightful articles on my blog"
-    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
+    title="Technical Insights and Security Perspectives"
+    information={`Explore in-depth articles on cybersecurity, cloud architecture, and defense technology innovation. Discover practical insights on enterprise security, technical leadership, and emerging trends in military IT transformation.`}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
