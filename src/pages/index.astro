@@ -13,43 +13,107 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Trimburtech.com— Enterprise Cybersecurity, Cloud & Network Architecture Services',
+  title: 'TrimburTech — Enterprise Cybersecurity, Cloud & Network Architecture Services',
   ignoreTitleTemplate: true,
 };
 ---
 <Layout metadata={metadata}>
+  <!-- Logo with subtle glow -->
+  <div class="flex justify-center items-center py-8">
+    <h1 class="text-6xl md:text-8xl font-bold tracking-tighter">
+      <span class="glow-t">T</span><span class="subtle-glow -ml-1">rimbur</span><span class="glow-t -ml-1">T</span><span class="subtle-glow -ml-1">ech</span>
+    </h1>
+  </div>
+
+  <div class="network-container">
+    <svg class="network" viewBox="-500 -250 1000 500">
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      
+      {(() => {
+        const nodes = Array.from({ length: 35 }).map((_, i) => {
+          const angle = (Math.PI * 2 * i) / 35;
+          const radius = 200 + (Math.random() - 0.5) * 150;
+          return {
+            id: i,
+            x: Math.cos(angle) * radius,
+            y: Math.sin(angle) * radius,
+            opacity: 0.3 + Math.random() * 0.7
+          };
+        });
+
+        const edges = nodes.flatMap((node, i) => 
+          nodes.slice(i + 1).filter(() => Math.random() < 0.15).map(target => ({
+            source: node,
+            target,
+            opacity: 0.1 + Math.random() * 0.3
+          }))
+        );
+
+        return (
+          <>
+            {edges.map(edge => (
+              <line
+                class="connection"
+                x1={edge.source.x}
+                y1={edge.source.y}
+                x2={edge.target.x}
+                y2={edge.target.y}
+                style={`--opacity: ${edge.opacity}; --delay: ${Math.random() * 2}s;`}
+              />
+            ))}
+            {nodes.map(node => (
+              <circle 
+                class="node"
+                cx={node.x}
+                cy={node.y}
+                r="2.5"
+                style={`--opacity: ${node.opacity}; --delay: ${Math.random() * 2}s;`}
+              />
+            ))}
+          </>
+        );
+      })()}
+    </svg>
+  </div>
+
   <Hero
     actions={[
       {
         variant: 'primary',
         text: 'Contact Us',
-        href: '#contact',
+        href: '/contact',
         icon: 'tabler:mail',
       },
-      { text: 'View Services', href: '#services' },
+      { 
+        text: 'Services', 
+        href: '/services',
+        variant: 'secondary',
+      },
+      { 
+        text: 'Blog', 
+        href: '/blog',
+        class: 'pill-button',
+      }
     ]}
     image={{ src: '~/assets/images/gears.webp', alt: 'Cybersecurity Services' }}
   >
-  <Fragment slot="title">
-    {/* <span class="hidden xl:inline">Delivering</span> */}
-    <span class="text-accent dark:text-white highlight">Sustainable Integration</span> 
-</Fragment>
-<Fragment slot="subtitle">
-    <span class="hidden sm:inline">
-      { 
-        /* Senkem Solutions can help your organization <span class="font-semibold">strategic technology initiatives</span> to deliver scalable solutions, streamline operations, and enhance organizational resilience.</span> */}
-    {/* <span class="block mb-1 sm:hidden font-bold text-blue-600">Secure. Scalable. Resilient.</span> */}
-    <span class="font-semibold">Senkem Solutions</span> partners with engineering, product, and security teams to deliver transformative solutions powered by cutting-edge innovation and data-driven leadership excellence.
-</Fragment>
-
-
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight">Sustainable Integration</span> 
+    </Fragment>
+    <Fragment slot="subtitle">
+      <span class="font-semibold">TrimburTech</span> partners with engineering, product, and security teams to deliver transformative solutions powered by cutting-edge innovation and data-driven leadership excellence.
+    </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-
   <Note />
-
-  <!-- Features Widget *************** -->
 
   <Features
     id="features"
@@ -96,8 +160,6 @@ const metadata = {
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
   <Content
     isReversed
     tagline="Our Approach"
@@ -134,8 +196,6 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
   <Content
     isAfterContent
     items={[
@@ -170,8 +230,6 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
 
   <Content
     isReversed
@@ -209,8 +267,6 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
-
   <Steps
     title="Transform your enterprise with our comprehensive security and cloud solutions."
     items={[
@@ -242,8 +298,6 @@ const metadata = {
       alt: 'Security Operations Center',
     }}
   />
-
-  <!-- Features2 Widget ************** -->
 
   <Features2
     title="Our Core Services"
@@ -307,17 +361,12 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- HighlightedPosts Widget ******* -->
-
   <BlogLatestPosts
     title="Find out more content in our Blog"
     information={`Our blog features insights on security program management, operational excellence, and technical leadership.
                         Each article shares practical strategies and lessons learned from implementing enterprise security initiatives,
                         with a focus on driving organizational resilience through technical expertise and data-driven approaches.`}
-                `}
   />
-
-  <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
@@ -358,8 +407,6 @@ const metadata = {
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
-
   <Stats
     stats={[
       { title: 'Years Experience', amount: '20+' },
@@ -369,19 +416,17 @@ const metadata = {
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
-
   <CallToAction
     actions={[
       {
         variant: 'primary',
         text: 'Contact Us',
-        href: '#contact',
+        href: '/contact',
         icon: 'tabler:mail',
       },
       {
-        text: 'View Services',
-        href: '#services',
+        text: 'Services',
+        href: '/services',
         icon: 'tabler:arrow-right',
       }
     ]}
@@ -396,3 +441,198 @@ const metadata = {
     </Fragment>
   </CallToAction>
 </Layout>
+
+<style>
+  .pill-button {
+    @apply rounded-full bg-blue-600 text-white px-6 py-2 hover:bg-blue-700 transition-colors;
+  }
+
+  .glow-t {
+    opacity: 0;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5),
+                 0 0 20px rgba(59, 130, 246, 0.3),
+                 0 0 30px rgba(59, 130, 246, 0.2);
+    animation: glow-in 2s ease-in forwards;
+  }
+
+  .subtle-glow {
+    opacity: 0;
+    animation: subtle-glow-in 2s ease-in forwards 1s;
+  }
+
+  @keyframes glow-in {
+    0% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 20px rgba(59, 130, 246, 0.8),
+                   0 0 40px rgba(59, 130, 246, 0.6),
+                   0 0 60px rgba(59, 130, 246, 0.4);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 10px rgba(59, 130, 246, 0.5),
+                   0 0 20px rgba(59, 130, 246, 0.3),
+                   0 0 30px rgba(59, 130, 246, 0.2);
+    }
+  }
+
+  @keyframes subtle-glow-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .globe-container {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+  }
+
+  .globe {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #1e40af, #1e3a8a);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+  }
+
+  .globe-grid {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: 
+      linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px) 0 0 / 10px 10px,
+      linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px) 0 0 / 10px 10px;
+  }
+
+  .satellites {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    top: -50%;
+    animation: rotate-opposite 30s linear infinite;
+  }
+
+  .satellite {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    transform-origin: left center;
+    transform: rotate(var(--orbit-angle)) translateX(60px);
+  }
+
+  .satellite-dot {
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    width: 4px;
+    height: 4px;
+    background: #60a5fa;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #60a5fa;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotateY(0deg) rotateX(23deg);
+    }
+
+    to {
+      transform: rotateY(360deg) rotateX(23deg);
+    }
+  }
+
+  @keyframes rotate-opposite {
+    from {
+      transform: rotateZ(360deg);
+    }
+    to {
+      transform: rotateZ(0deg);
+    }
+  }
+
+  /* Add connection lines between satellites */
+  .satellite::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.3));
+    transform-origin: left center;
+    transform: rotate(45deg);
+  }
+
+  .network-container {
+    height: 400px;
+    position: relative;
+    overflow: visible;
+    margin: -40px 0 -20px 0;
+  }
+
+  .network {
+    width: 100%;
+    filter: url(#glow);
+  }
+
+  .node {
+    fill: rgba(147, 197, 253, var(--opacity));
+    opacity: 0;
+    animation: emerge 3s ease-out forwards,
+               fade-to-dim 2s ease-out forwards 3s;
+    animation-delay: var(--delay);
+  }
+
+  .connection {
+    stroke: rgba(147, 197, 253, var(--opacity));
+    stroke-width: 0.5;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    opacity: 0;
+    animation: draw-line 2s ease-out forwards,
+               fade-to-dim 2s ease-out forwards 3s;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes emerge {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes draw-line {
+    0% {
+      stroke-dashoffset: 300;
+      opacity: 0;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-to-dim {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+</style>
