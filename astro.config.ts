@@ -12,7 +12,6 @@ import compress from 'astro-compress';
 import type { AstroIntegration } from 'astro';
 
 import astrowind from './vendor/integration';
-
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -22,15 +21,10 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  export default defineConfig({
-  site: 'https://shanetrimbur.github.io/tech-services', // Your GitHub Pages URL
-  base: '/tech-services/', // Matches your repo name
-  trailingSlash: 'ignore',
-  output: 'static',
   site: 'https://shanetrimbur.github.io/tech-services', // Ensure this matches your GitHub Pages URL
   base: '/tech-services/', // Matches the repository name
   trailingSlash: 'ignore',
-
+  output: 'static',
 
   integrations: [
     tailwind({
