@@ -27,6 +27,9 @@ export default defineConfig({
   base: '/tech-services/', // Matches your repo name
   trailingSlash: 'ignore',
   output: 'static',
+  site: 'https://shanetrimbur.github.io/tech-services', // Ensure this matches your GitHub Pages URL
+  base: '/tech-services/', // Matches the repository name
+  trailingSlash: 'ignore',
 
 
   integrations: [
@@ -51,13 +54,11 @@ export default defineConfig({
         ],
       },
     }),
-
     ...whenExternalScripts(() =>
       partytown({
         config: { forward: ['dataLayer.push'] },
       })
     ),
-
     compress({
       CSS: true,
       HTML: {
@@ -70,7 +71,6 @@ export default defineConfig({
       SVG: false,
       Logger: 1,
     }),
-
     astrowind({
       config: './src/config.yaml',
     }),
