@@ -22,7 +22,12 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
+  export default defineConfig({
+  site: 'https://shanetrimbur.github.io/tech-services', // Your GitHub Pages URL
+  base: '/tech-services/', // Matches your repo name
+  trailingSlash: 'ignore',
   output: 'static',
+
 
   integrations: [
     tailwind({
