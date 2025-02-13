@@ -26,6 +26,10 @@ export default defineConfig({
   trailingSlash: 'ignore',
   output: 'static',
 
+  build: {
+    assetsPrefix: '/tech-services/', // Ensures assets are properly referenced
+  },
+
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -48,11 +52,13 @@ export default defineConfig({
         ],
       },
     }),
+
     ...whenExternalScripts(() =>
       partytown({
         config: { forward: ['dataLayer.push'] },
       })
     ),
+
     compress({
       CSS: true,
       HTML: {
@@ -65,6 +71,7 @@ export default defineConfig({
       SVG: false,
       Logger: 1,
     }),
+
     astrowind({
       config: './src/config.yaml',
     }),
